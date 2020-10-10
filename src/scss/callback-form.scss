@@ -1,0 +1,57 @@
+.callback-form-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 0 32px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.12);
+  height: 154px;
+  &__text-block {
+    margin-right: 30px;
+  }
+
+  &__header {
+    font-weight: fw(medium);
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 14px;
+  }
+
+  &__subheading {
+    color: font-color(muted);
+    font-size: $fz-small;
+    line-height: $lh-base;
+  }
+
+}
+
+.callback-form {
+  &__controls {
+    display: flex;
+  }
+
+  &__input{
+    margin-right: 16px;
+    flex: 1;
+  }
+
+  &__btn {
+    flex: 0;
+    white-space: nowrap;
+  }
+
+  &__agreement {
+    margin-top: 12px;
+    color: font-color(muted);
+
+    a {
+      font-size: $fz-small;
+      color: font-color(muted);
+      border-bottom: 1px solid font-color(muted);
+
+      &:hover {
+        color: font-color(accent);
+        border-bottom: 1px solid font-color(accent);
+      }
+    }
+  }
+}

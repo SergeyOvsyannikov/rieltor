@@ -1,0 +1,33 @@
+@import "../variables";
+
+.sub-menu {
+  display: flex;
+  padding: 25px 0;
+  background: $body-color;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.12);
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 25px;
+    flex-basis: 25%;
+    background: $body-color;
+    font-size: $fz-sub-menu;
+    line-height: 29px;
+    font-weight: fw(medium);
+    border-right: 1px solid #CDCDCD;
+
+    &:last-child {
+      border-right: none;
+    }
+
+    div {
+      margin-top: 8px;
+      font-size: $fz-small;
+      line-height: 20px;
+    }
+  }
+}

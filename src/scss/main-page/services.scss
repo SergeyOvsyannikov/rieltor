@@ -1,0 +1,55 @@
+@import "../variables";
+
+$card-bgs: (
+        'red': linear-gradient(180deg, #EF3054 0%, #D11236 100%),
+        'orange': linear-gradient(180deg, #FF6F59 0%, #E1513B 100%),
+        'aqua': linear-gradient(180deg, #28AFB0 0%, #0A9192 100%),
+        'violet': linear-gradient(180deg, #9590A8 0%, #77728A 100%)
+);
+
+.services {
+  display: flex;
+  justify-content: center;
+  background: $services-bg-color;
+  padding: 105px 0;
+  &__header {
+    margin-bottom: 28px;
+  }
+
+  &__cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 64px;
+  }
+
+  &__card {
+    display: block;
+    width: 584px;
+    color: font-color(white);
+    height: 240px;
+    padding: 48px 32px;
+    margin-top: 32px;
+    border-radius: 8px;
+
+    @each $name, $value in $card-bgs {
+      &--#{$name} {
+        background: $value;
+      }
+    }
+
+    &-header {
+      font-size: 28px;
+      line-height: 34px;
+      color: font-color('white');
+      margin-bottom: 20px;
+    }
+
+    &-text {
+      font-size: $fz-small;
+      line-height: $lh-base;
+      width: 320px;
+      color: font-color('white');
+    }
+  }
+}

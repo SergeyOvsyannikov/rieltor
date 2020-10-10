@@ -1,0 +1,38 @@
+.btn {
+  border: none;
+  background-color: button-bg('classic');
+  font-weight: fw('medium');
+  color: font-color('button');
+  border-radius: 8px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: button-bg('hover');
+  }
+}
+
+.btn.btn--default {
+  padding: 16px 40px;
+  font-size: $fz-big;
+  line-height: $lh-btn-default;
+}
+
+.btn.btn--small {
+  padding: 12px 32px;
+  font-size: $fz-base;
+  line-height: $lh-btn-small;
+}
+
+.btn.btn--white {
+  color: font-color('base');
+  font-size: $fz-small;
+  line-height: $lh-btn-smallest;
+  font-weight: fw('base');
+  padding: 12px 40px;
+  background: button-bg('white');
+  border: 1px solid #CDCDCD;
+
+  &:hover {
+    background-color: button-bg('white-hover');
+  }
+}

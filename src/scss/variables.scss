@@ -1,0 +1,74 @@
+//fonts
+$font-base: 'Rubik', sans-serif;
+
+$fw: (
+   base: normal,
+   medium: 500,
+   bold: bold
+);
+
+@function fw($weight) {
+  @return map_get($fw, $weight);
+}
+/***********/
+
+//colors
+$body-color: #ffffff;
+$services-bg-color: #F8F8F8;
+
+
+$font-colors: (
+        base: #333333,
+        button: #ffffff,
+        accent: #FE7F2D,
+        muted: #767676,
+        h1: #ffffff,
+        'white': #ffffff
+);
+
+@function font-color($font-name) {
+  @return map_get($font-colors, $font-name);
+}
+/***********/
+
+//buttons
+$button-bgs: (
+        classic: #FE7F2D,
+        hover: #EA6B19,
+        'white': #FFFFFF,
+        white-hover: #F6F6F6
+);
+
+@function button-bg($color-name) {
+  @return map_get($button-bgs, $color-name);
+}
+
+$lh-btn-smallest: 17px;
+$lh-btn-default: 23px;
+$lh-btn-small: 21px;
+/***********/
+
+//sizes
+$fz-small: 14px;
+$fz-base: 16px;
+$fz-big: 18px;
+$fz-h1: 64px;
+$fz-h2: 32px;
+$fz-sub-menu: 22px;
+
+$lh-base: 19px;
+$lh-big: 21px;
+$lh-large: 24px;
+$lh-h2: 38px;
+/***********/
+
+//inputs
+$input-border: #CDCDCD;
+$input-border-hover: #767676;
+$input-color: #767676;
+
+
+/**********/
+
+//spacers
+$section-spacer: 104px;

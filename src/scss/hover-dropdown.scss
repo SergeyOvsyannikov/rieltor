@@ -1,0 +1,19 @@
+.hover-dropdown {
+  position: relative;
+
+  &:hover{
+    .hover-dropdown__list {
+      display: block;
+    }
+  }
+
+  &__list {
+    display: none;
+    position: absolute;
+    top: 100%;
+
+    &:hover{
+      display: block;
+    }
+  }
+}

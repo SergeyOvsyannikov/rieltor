@@ -1,0 +1,11 @@
+.input {
+  padding: 15px 16px;
+  color: $input-color;
+  border: 1px solid $input-border;
+  border-radius: 4px;
+
+  &:hover {
+    border: 1px solid $input-border-hover;
+  }
+
+}

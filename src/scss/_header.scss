@@ -1,0 +1,60 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 76px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.12);
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo-container {
+  }
+
+  &__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 295px;
+
+    &-link {
+      font-weight: fw('medium');
+    }
+  }
+
+  &__hover-dropdown {
+    padding: 8px 0;
+    font-weight: fw('medium');
+    cursor: pointer;
+
+    .hover-dropdown__list {
+      width: 210px;
+      padding: 24px 20px 32px;
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.12);
+      background: $body-color;
+      list-style: none;
+    }
+
+    .hover-dropdown__list-item {
+      margin-bottom: 16px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__contacts {
+    &-phone {
+      font-size: $fz-big;
+      line-height: $lh-big;
+      font-weight: fw('medium');
+      margin-right: 40px;
+    }
+  }
+}

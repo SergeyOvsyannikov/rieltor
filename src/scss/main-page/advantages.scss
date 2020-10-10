@@ -1,0 +1,27 @@
+@import "../variables";
+
+.advantages {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__item {
+    display: flex;
+    flex-basis: 24%;
+  }
+
+  &__icon {
+    margin-right: 20px;
+  }
+
+  &__header {
+    font-weight: fw(medium);
+    font-size: $fz-big;
+    margin-bottom: 8px;
+  }
+
+  &__text {
+    color: font-color(muted);
+    font-size: $fz-small;
+  }
+}

@@ -1,0 +1,38 @@
+@import "../variables";
+
+.about {
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__content {
+    flex-basis: 50%;
+  }
+
+  &__header {
+    margin-bottom: 24px;
+  }
+
+  &__text {
+    p {
+      margin-bottom: 24px;
+      line-height: $lh-large;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__image {
+    border-radius: 88px 8px 8px 8px;
+    width: 496px;
+    height: 331px;
+    background: url("../../img/about-bg.png") no-repeat center top;
+    background-size: contain;
+  }
+}
