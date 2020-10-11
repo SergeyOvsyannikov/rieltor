@@ -4,26 +4,28 @@ const clean = require("gulp-clean");
 const rigger = require("gulp-rigger");
 
 const src = './src/';
-const scssPath = src + 'scss/';
-const fontsPath = src + 'fonts/';
-const imgPath = src + 'img/';
+const assets = src+'assets/';
+const scssPath = assets + 'style/scss/';
+const fontsPath = assets + 'fonts/';
+const imgPath = assets + 'img/';
 const htmlPath = src + 'layout/'
-const distPath = src + 'dist/';
+const distPath = src + '../dist/';
+const distAssetsPath = distPath + 'assets/';
 
 function scss() {
     return gulp.src(scssPath + 'common.scss')
         .pipe(sass())
-        .pipe(gulp.dest(distPath + 'css/'));
+        .pipe(gulp.dest(distAssetsPath + 'css/'));
 }
 
 function fonts() {
     return gulp.src(fontsPath + '*.+(woff|woff2)')
-        .pipe(gulp.dest(distPath + 'fonts/'));
+        .pipe(gulp.dest(distAssetsPath + 'fonts/'));
 }
 
 function images() {
     return gulp.src(imgPath + '*.png')
-        .pipe(gulp.dest(distPath + 'img/'));
+        .pipe(gulp.dest(distAssetsPath + 'img/'));
 }
 
 function fontsClean() {
@@ -34,13 +36,13 @@ function fontsClean() {
 function mainPage() {
     return gulp.src(scssPath + 'main-page/*.scss')
         .pipe(sass())
-        .pipe(gulp.dest(distPath + 'css/main-page/'));
+        .pipe(gulp.dest(distAssetsPath + 'css/main-page/'));
 }
 
 function htmlMainPage() {
     return gulp.src(htmlPath + 'main-page/*.html')
         .pipe(rigger())
-        .pipe(gulp.dest(distPath + 'html/main-page/'));
+        .pipe(gulp.dest(distPath + 'main-page/'));
 }
 
 function watch () {
