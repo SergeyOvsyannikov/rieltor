@@ -1,0 +1,63 @@
+.comment-widget {
+  display: flex;
+  justify-content: center;
+
+  &__header {
+    margin-bottom: 16px;
+  }
+}
+
+.comment-slider {
+
+}
+
+.comment-slider-item {
+  position: relative;
+  padding: 20px 0 0 0;
+  width: 380px;
+
+  &__container {
+    padding: 16px 24px 32px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.12);;
+    border-radius: 8px 8px 40px 8px;
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 24px;
+    border-radius: 4px;
+  }
+
+  &__rating-block {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__rating-star {
+    fill: #BDBDBD;
+    margin-right: 2px;
+
+
+    &--green {
+      fill: #219653;
+    }
+  }
+
+  &__name {
+    margin: 16px 0;
+    font-weight: fw(medium);
+  }
+
+  &__text-block {
+    display: flex;
+  }
+
+  &__quote {
+    width: 27px;
+    min-width: 27px;
+    margin-right: 8px;
+  }
+
+
+}
