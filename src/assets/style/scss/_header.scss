@@ -19,32 +19,65 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 295px;
 
-    &-link {
-      font-weight: fw('medium');
+    &-primary {
+      list-style: none;
+      display: flex;
+
+      .menu {
+        &-item + .menu-item {
+          margin-left: 32px;
+        }
+
+        &-item {
+          padding: 8px 0;
+          font-weight: fw('medium');
+          cursor: pointer;
+          display: flex;
+          position: relative;
+
+          &:hover {
+            .sub-menu {
+              display: block;
+            }
+          }
+
+          .sub-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+
+            &:hover {
+              display: block;
+            }
+          }
+        }
+      }
+
+      .menu-item-has-children::after {
+        display: block;
+        content: '';
+        width: 8px;
+        height: 6px;
+        background-image: url("data:image/svg+xml, %3Csvg width='9' height='6' viewBox='0 0 9 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.03033 0.96967C1.73744 0.676777 1.26256 0.676777 0.96967 0.96967C0.676777 1.26256 0.676777 1.73744 0.96967 2.03033L2.03033 0.96967ZM8.03033 2.03033C8.32322 1.73744 8.32322 1.26256 8.03033 0.96967C7.73744 0.676777 7.26256 0.676777 6.96967 0.96967L8.03033 2.03033ZM0.96967 2.03033L3.61612 4.67678L4.67678 3.61612L2.03033 0.96967L0.96967 2.03033ZM5.38388 4.67678L8.03033 2.03033L6.96967 0.96967L4.32322 3.61612L5.38388 4.67678ZM3.61612 4.67678C4.10427 5.16493 4.89573 5.16493 5.38388 4.67678L4.32322 3.61612C4.42085 3.51849 4.57915 3.51849 4.67678 3.61612L3.61612 4.67678Z' fill='%23333333'/%3E%3C/svg%3E");
+        background-size: 8px 6px;
+        margin: 6px 0 0 6px;
+      }
     }
   }
 
-  &__hover-dropdown {
-    padding: 8px 0;
-    font-weight: fw('medium');
-    cursor: pointer;
+  .sub-menu {
+    width: 210px;
+    padding: 24px 20px 32px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.12);
+    background: $body-color;
+    list-style: none;
 
-    .hover-dropdown__list {
-      width: 210px;
-      padding: 24px 20px 32px;
-      border-radius: 8px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.12);
-      background: $body-color;
-      list-style: none;
-    }
-
-    .hover-dropdown__list-item {
-      margin-bottom: 16px;
-
-      &:last-child {
-        margin-bottom: 0;
+    & > .menu-item {
+      & + .menu-item {
+        margin-left: 0;
+        margin-top: 16px;
       }
     }
   }
