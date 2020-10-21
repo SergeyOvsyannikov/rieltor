@@ -6,7 +6,7 @@ const rigger = require("gulp-rigger");
 const src = './src/';
 const assets = src+'assets/';
 const scssPath = assets + 'style/scss/';
-const fontsPath = '../fonts/';
+const fontsPath = assets + '/fonts/';
 const imgPath = assets + 'img/';
 const htmlPath = src + 'layout/'
 const distPath = src + '../dist/';
@@ -33,12 +33,6 @@ function fontsClean() {
         .pipe(clean({force: true}));
 }
 
-function mainPage() {
-    return gulp.src(scssPath + 'main-page/*.scss')
-        .pipe(sass())
-        .pipe(gulp.dest(distAssetsPath + 'css/main-page/'));
-}
-
 function htmlMainPage() {
     return gulp.src(htmlPath + 'main-page/*.html')
         .pipe(rigger())
@@ -47,9 +41,9 @@ function htmlMainPage() {
 
 function watch () {
     gulp.watch(scssPath + '*.scss', scss);
-    gulp.watch(scssPath + 'main-page/*.scss', mainPage);
+    gulp.watch(scssPath + 'main-page/*.scss', scss);
     gulp.watch(htmlPath + 'main-page/*.html', htmlMainPage);
     gulp.watch(htmlPath + '*.html', htmlMainPage);
 }
 
-exports.default = gulp.series(fonts, images, scss, mainPage, htmlMainPage, watch);
+exports.default = gulp.series(fonts, images, scss, htmlMainPage, watch);

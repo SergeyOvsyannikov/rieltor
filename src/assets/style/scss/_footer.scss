@@ -1,0 +1,93 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 72px;
+
+  &__header {
+    margin-bottom: 60px;
+  }
+
+  &__partners {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 104px;
+
+    &-item {
+      flex-basis: 50%;
+      &:first-child {
+        border-right: 1px solid #CDCDCD;
+        padding-right: 50px;
+      }
+
+      &:last-child {
+        padding-left: 50px;
+      }
+    }
+
+    &-header {
+      color: font-color(muted);
+      margin-bottom: 19px;
+    }
+
+    &-company-list {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__about {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 25px;
+    padding-bottom: 32px;
+    margin-top: 104px;
+    border-top: 1px solid #CDCDCD;
+  }
+
+  &__copyright {
+    color: font-color(muted);
+    margin-top: 12px;
+    font-size: 12px;
+  }
+
+  &__menu-list {
+    display: flex;
+    list-style: none;
+  }
+
+  &__menu-item {
+    margin-right: 32px;
+    font-size: $fz-base;
+    line-height: $lh-base;
+    color: font-color(muted);
+    font-weight: fw(medium);
+  }
+
+  &__politic {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    font-size: $fz-small;
+    line-height: 17px;
+    color: font-color(muted);
+  }
+
+  &__contacts {
+    a {
+      display: block;
+      color: font-color(muted);
+    }
+  }
+
+  &__phone {
+    font-weight: fw(medium);
+    font-size: $fz-big;
+    line-height: $lh-big;
+    margin-bottom: 13px;
+  }
+
+  &__footer {
+    font-size: $fz-base;
+    line-height: $lh-base;
+  }
+}
